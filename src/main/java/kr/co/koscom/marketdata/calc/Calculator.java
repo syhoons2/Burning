@@ -1,5 +1,10 @@
 package kr.co.koscom.marketdata.calc;
 
+import kr.co.koscom.marketdata.model.InputModel;
+import kr.co.koscom.marketdata.model.Master;
+import kr.co.koscom.marketdata.model.Price;
+import kr.co.koscom.marketdata.model.Trend;
+
 public class Calculator {
 	
 	//private int resultvalue;
@@ -125,6 +130,17 @@ public class Calculator {
 			return name + "럘";
 		else
 			return name;
+	}
+	
+	public double calcAll(InputModel inputmodel, Price price, Master master, Trend trend, double[] scores, double[] bonus_scores){
+		scores[0] = (nameCal(cutName(inputmodel.getName()), cutName(master.getIsuKorAbbrv())) / 100.0); /* 0 <= nameCalval <= 1 */
+		scores[1] = score1(Integer.parseInt(master.getParval()), (int)price.getHgprc(), (int)price.getLwprc());
+		scores[2] = score2(Integer.parseInt(master.getPrevddClsprc()), (int)price.getOpnprc());
+		bonus_scores[0] = bonus_score1(Double.parseDouble(trend.getValue()), Integer.parseInt(trend.getCount()));
+
+		double friendly_score = (int)(friendly_score1(scores,  bonus_scores) * 1000) / 10.0;
+		
+		return friendly_score;
 	}
 	
 	

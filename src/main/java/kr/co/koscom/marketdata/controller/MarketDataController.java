@@ -50,17 +50,13 @@ public class MarketDataController {
 		Price price = marketDataApiCaller.getPrice(inputmodel);
 		Master master = marketDataApiCaller.getMaster(inputmodel);
 		Trend trend = marketDataApiCaller.getTrend(inputmodel);
+		Calculator calc = new Calculator();
 		
 		double[] scores = new double[3];
 		double[] bonus_scores = new double[1];
 		
-		Calculator cal = new Calculator();
-		scores[0] = (cal.nameCal(cal.cutName(inputmodel.getName()), cal.cutName(master.getIsuKorAbbrv())) / 100.0); /* 0 <= nameCalval <= 1 */
-		scores[1] = cal.score1(Integer.parseInt(master.getParval()), (int)price.getHgprc(), (int)price.getLwprc());
-		scores[2] = cal.score2(Integer.parseInt(master.getPrevddClsprc()), (int)price.getOpnprc());
-		bonus_scores[0] = cal.bonus_score1(Double.parseDouble(trend.getValue()), Integer.parseInt(trend.getCount()));
-
-		double friendly_score = (int)(cal.friendly_score1(scores,  bonus_scores) * 1000) / 10.0;
+		
+		double friendly_score = calc.calcAll( inputmodel,  price,  master,  trend,  scores, bonus_scores);
 		
 		modelMap.addAttribute("friendly_score", friendly_score);
 		
