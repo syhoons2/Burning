@@ -52,6 +52,9 @@ public class AlphabetSplit {
 		String result = ""; // 결과 저장할 변수
 		String resultEng = ""; // 알파벳으로
 
+		if(word.length()>3)
+			System.out.println("length 3 초과");
+		
 		int[] namevaluelist = new int[3];
 
 		for (int i = 0; i < word.length(); i++) {
@@ -134,11 +137,11 @@ public class AlphabetSplit {
 
 		} // for
 
-		System.out.println("============ result ==========");
-		System.out.println("단어     : " + word);
-		System.out.println("자음분리 : " + result);
-		System.out.println("알파벳   : " + resultEng);
-		System.out.println(word.length());
+		//System.out.println("============ result ==========");
+		//System.out.println("단어     : " + word);
+		//System.out.println("자음분리 : " + result);
+		//System.out.println("알파벳   : " + resultEng);
+		//System.out.println(word.length());
 
 		return namevaluelist;
 	}

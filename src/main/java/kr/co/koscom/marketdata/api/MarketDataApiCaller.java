@@ -11,6 +11,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import kr.co.koscom.marketdata.calc.AlphabetSplit;
+import kr.co.koscom.marketdata.calc.Calculator;
 import kr.co.koscom.marketdata.model.InputModel;
 import kr.co.koscom.marketdata.model.Master;
 import kr.co.koscom.marketdata.model.Price;
@@ -37,8 +38,8 @@ public class MarketDataApiCaller {
 			JsonNode node = objectMapper.readTree(jsonStr);
 
 			Price price = objectMapper.readValue(node.findValue("result").toString(), Price.class);
-			AlphabetSplit split = new AlphabetSplit();
-			split.nameSplit(inputdata.getName());
+			
+			
 			return price;
 		} catch (JsonProcessingException e) {
 			e.printStackTrace();
@@ -57,6 +58,13 @@ public class MarketDataApiCaller {
 			JsonNode node = objectMapper.readTree(jsonStr);
 
 			Master master = objectMapper.readValue(node.findValue("result").toString(), Master.class);
+			
+
+			/*AlphabetSplit split = new AlphabetSplit();
+			Calculator cal = new Calculator();
+			int nameCalval = cal.nameCal(inputdata.getName(), master.getIsuKorAbbrv());
+			System.out.println("nameCalval: "+nameCalval);*/
+			
 			return master;
 		} catch (JsonProcessingException e) {
 			e.printStackTrace();
