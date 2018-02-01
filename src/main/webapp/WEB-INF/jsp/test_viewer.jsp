@@ -9,8 +9,14 @@
 <body>
 	<br>
 		결과가 나왔지롱
-		${price.getIsuSrtCd()} ${price.getOpnprc()} ${price.getLstAskbidTpCd()}
-
+		<br>#Master: </br>
+		${master.getIsuKorAbbrv()} ${master.getPrevddClsprc()} ${master.getParval()}
+		<br>#Price: </br> 
+		${price.getOpnprc()} ${price.getHgprc()} ${price.getLwprc()}
+		<br>#Trend: </br> 
+		${trend.getCount()} ${trend.getValue()}
+		
+	
 	</br>
 </body>
 </html>

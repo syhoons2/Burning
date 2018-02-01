@@ -1,6 +1,8 @@
 package kr.co.koscom.marketdata.model;
 
-public class Master {
+import java.io.Serializable;
+
+public class Master implements Serializable{
 	
 	private static final long serialVersionUID = 5328249083677015804L;
 
