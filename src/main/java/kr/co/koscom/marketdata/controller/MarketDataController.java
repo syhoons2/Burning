@@ -1,6 +1,5 @@
 package kr.co.koscom.marketdata.controller;
-
-<<<<<<< HEAD
+/*
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -14,7 +13,7 @@ public class MarketDataController {
     }
 
 }
-=======
+*/
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -33,7 +32,7 @@ import kr.co.koscom.marketdata.model.Trend;
 import kr.co.koscom.marketdata.model.Master;
 
 @Controller
-public class MarketDataController {
+public class MarketDataController{
 
 	@Autowired
 	private MarketDataApiCaller marketDataApiCaller;
@@ -87,4 +86,3 @@ public class MarketDataController {
 
 }
 
->>>>>>> c90bbcf934d1eb858f0df91e1e5669db41dda921
