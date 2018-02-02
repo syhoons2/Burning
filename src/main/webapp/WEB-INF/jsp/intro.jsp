@@ -57,7 +57,7 @@ table, th, td {
 		</p0>
 		<h1></h1>
 		<h1></h1>
-	
+	<!-- 
 	<form modelAttribute="inputdata" action="/testinput" method="post" class="jg">
 		이름 : <input type="text" name="name" value="표원일" /><br />
 		생년월일 : <input type="text" name="birthday" value="910826" /><br />
@@ -65,6 +65,69 @@ table, th, td {
 		
 		기업코드: <input type="text" name="issue_code" value="005930" /><br />
 		<h1></h1>
+		<input type="submit" value="확인" />
+	</form>
+	-->
+	 
+	
+	<form modelAttribute="inputdata" action="/testinput" method="post" class="jg">
+	<table width = 400px>
+	
+  			 <!-- 
+  			<tr>
+	    		<th><p2 class="jg"><br>손금보기 </br></p2></th>
+			    <th></th>
+			</tr>
+			 -->
+			 <tr><h1></h1>
+			 </tr>
+			<tr>
+			 </tr>
+			
+			
+			<tr>
+				<p3 class="jg">
+	    		<th class="jg">이름       : </th>
+			    <th class="jg"><input type="text" name="name" value="표원일" /><br /></th>
+			    </p3>
+			</tr>
+			<tr>
+	    		<p3>
+	    		<th class="jg">생년월일 : </th>
+			    <th class="jg"><input type="text" name="birthday" value="910826" /><br /></th>
+			    </p3>
+			</tr>
+			<tr>
+	    		<p3>
+	    		<th class="jg">키워드    : </th>
+			    <th class="jg"><input type="text" name="keyword" value="핑크" /><br /></th>
+			    </p3>
+			</tr>
+			<tr>
+	    		<p3>
+	    		<th class="jg">기업코드  : </th>
+			    <th class="jg"><input type="text" name="issue_code" value="005930" /><br /></th>
+			    </p3>
+			</tr>
+			
+			
+			<!-- 
+			<tr>
+	    		<th><p2 class="jg"><br>발금보기 </br></p2></th>
+			    <th></th>
+			</tr>
+			<tr>
+	    		<p3>
+	    		<th class="jg">트랜드수치(${trend.getValue()}, ${trend.getCount()})</th>
+			    <th class="jg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${bonus_score0}</th>
+			    </p3>
+			</tr>
+			 -->
+			 
+		
+		</table>
+		
+		 
 		<input type="submit" value="확인" />
 	</form>
  
