@@ -38,9 +38,9 @@ public class AlphabetSplit {
 
 	public int calcHangulValue(String str) {
 
-		String hangul = "ㄱㄴㅇㄷㅅㅈㅋㄲㄹㅁㅊㅌㅎㅂㅍㄸㅆㅃㅡㅣㅏㅓㅗㅜㅢㅑㅕㅛㅠㅐㅔㅚㅟㅒㅖㅝㅞㅙ";
+		String hangul = "ㄱㄴㅇㄷㅅㅈㅋㄲㄹㅁㅊㅌㅎㅂㅍㄸㅆㅃㅡㅣㅏㅓㅗㅜㅢㅑㅕㅛㅠㅐㅔㅚㅟㅒㅖㅘㅝㅞㅙ";
 		int[] hangul_cnt = { 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 8, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3,
-				3, 3, 3, 4, 4, 4, 5, 5 };
+				3, 3, 3, 4, 4, 4, 4, 5, 5 };
 
 		return hangul_cnt[hangul.indexOf(str)];
 
